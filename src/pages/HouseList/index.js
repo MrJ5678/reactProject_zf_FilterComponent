@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-20 16:58:38
- * @LastEditTime: 2020-04-30 15:24:43
+ * @LastEditTime: 2020-04-30 17:09:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /react_zufang/src/pages/HouseList/index.js
@@ -33,7 +33,6 @@ export default class HouseList extends React.Component {
         </Flex>
         {/* 条件筛选栏 */}
         <Filter />
-        <div>addCss</div>
       </div>
     )
   }
