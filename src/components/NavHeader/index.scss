@@ -1,0 +1,15 @@
+.am-navbar.am-navbar-light{
+  // 组件保持默认基本样式, 对于某个页面单独需要的样式, 然后在那些页面单独添加样式
+  // margin-top: -45px;
+  background-color: #f6f5f6;
+}
+
+.am-navbar-left {
+  padding-left: 15px;
+  font-size: 20px;
+  color: #333333;
+}
+
+.am-navbar.am-navbar-light .am-navbar-title{
+  color: #333333;
+}

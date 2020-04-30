@@ -1,0 +1,196 @@
+div .index {
+
+  .swiper {
+    position: relative;
+    height: 212px;
+  }
+  .nav {
+    padding: 10px 0;
+
+    .am-flexbox-item {
+      text-align: center;
+
+      img {
+        width: 48px;
+      }
+
+      h2 {
+        margin-top: 8px;
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+
+  }
+  // 租房小组样式
+  .group {
+    overflow: hidden;
+    background-color: #f6f5f6;
+    padding: 0 10px;
+
+    .title {
+      position: relative;
+      margin: 15px 0 15px 10px;
+      font-size: 15px;
+
+      .more {
+        font-size: 14px;
+        position: absolute;
+        right: 0;
+        color: #787d82;
+      }
+    }
+    // 覆盖默认背景色
+    .am-grid .am-flexbox {
+      background-color: inherit;
+
+      .am-flexbox-item .am-grid-item-content {
+        padding: 0;
+        padding-bottom: 10px;
+      }
+    }
+
+    .group-item {
+      height: 75px;
+
+      .desc {
+
+        .desc-title {
+          font-weight: bold;
+          font-size: 13px;
+          margin-bottom: 5px;
+        }
+        .info {
+          font-size: 12px;
+          color: #999;
+        }
+      }
+      img {
+        position: relative;
+        top: 4px;
+        width: 60px;
+      }
+    }
+    .am-flexbox-align-stretch {
+      margin-bottom: 10px;
+
+      .am-grid-item {
+        background-color: #fff;
+
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  // 最新资讯样式
+  .news {
+    padding: 10px;
+    background-color: #fff;
+    overflow: hidden;
+  
+    .group-title {
+      margin: 10px 0 5px 10px;
+      font-size: 15px;
+    }
+  
+    .news-item {
+      height: 120px;
+      padding: 15px 10px 15px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+  
+    .news-item:last-child {
+      border: 0;
+    }
+  
+    .imgwrap {
+      float: left;
+      height: 90px;
+      width: 120px;
+    }
+  
+    .img {
+      height: 90px;
+      width: 120px;
+    }
+  
+    .content {
+      overflow: hidden;
+      height: 100%;
+      padding-left: 12px;
+    }
+  
+    .title {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+  
+    .info {
+      width: 100%;
+      color: #9c9fa1;
+      font-size: 12px;
+    }
+  
+    .message-title {
+      margin-bottom: 48px;
+    }
+  }
+  // .news {
+  //   // padding: 0 6px;
+  //   background-color: #fff;
+  //   // overflow: hidden;
+
+  //   .title {
+  //     padding: 0 10px;
+  //     margin: 15px 0 5px 10px;
+  //     font-size: 15px;
+  //   }
+
+  //   .news-item {
+  //     display: flex;
+  //     padding-top: 10px;
+  //     padding-bottom: 5px;
+  //     border-bottom: 1px solid #e5e5e5;
+
+  //     &:last-child {
+  //       border: 0;
+  //     }
+  //     .imgwrap {
+  //       margin-left: 10px;
+  //       img {
+  //         width: 130px;
+  //         border-radius: 5px;
+  //       }
+  //     }
+  //   }
+
+  //   .content {
+  //     padding: 5px;
+  //     padding-left: 10px;
+  //     padding-right: 10px;
+
+  //     .content-title {
+  //       font-size: 14px;
+  //       color: #40454a;
+  //     }
+      
+  //     .info{
+  //       margin-top: 45px; 
+  //       span {
+  //         font-size: 8px;
+  //         color: #666;
+
+  //         // &:nth-child(1) {
+  //         //   margin-right: 120px;
+  //         // }
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+
+
+

@@ -1,0 +1,15 @@
+/* 顶部导航栏样式 */
+.header {
+  height: 45px;
+  padding: 0 10px;
+  background-color: #f6f5f6;
+}
+
+/*  */
+.searchHeader {
+  position: static;
+}
+
+.searchHeader :global(.icon-map) {
+  color: rgb(33, 185, 122);
+}
