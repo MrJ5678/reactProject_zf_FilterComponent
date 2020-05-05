@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-30 11:05:05
- * @LastEditTime: 2020-04-30 11:35:03
+ * @LastEditTime: 2020-05-03 15:58:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /react_zufang/src/pages/HouseList/components/FilterPicker/index.js
@@ -12,19 +12,30 @@ import FilterFooter from '../../../../components/FilterFooter'
 
 import { PickerView } from 'antd-mobile'
 
-import styles from './index.module.css'
-
-const province = []
-
 export default class FilterPicker extends React.Component {
+  state = {
+    value: this.props.defaultValue
+  }
+
   render() {
+    const { onCancel, onSave, data, cols, type } = this.props
+    const { value } = this.state
+
     return (
       <>
         {/* 选择器组件 */}
-        <PickerView data={province} value={null} cols={3}/>
+        <PickerView 
+          data={data} 
+          value={value} 
+          cols={cols}
+          onChange={val => {
+            let value = val
+            this.setState({value})
+          }}
+        />
 
         {/* 底部按钮 */}
-        <FilterFooter />
+        <FilterFooter onCancel={() => onCancel(type)} onOk={() => onSave(type, value)}/>
       </>
     )
   }

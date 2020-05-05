@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-30 11:05:18
- * @LastEditTime: 2020-04-30 11:44:23
+ * @LastEditTime: 2020-05-01 10:45:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /react_zufang/src/pages/HouseList/components/FilterTitle/index.js
@@ -20,18 +20,25 @@ const titleList = [
   { title: '筛选', type: 'more' },
 ]
 
-export default class FilterTitle extends React.Component {
-  render() {
+export default function FilterTitle({ titleSelectedStatus, onClick }) {
+  
     return (
       <Flex align='center' className={styles.root}>
-        <Flex.Item>
-          {/* 选中类名 */}
-          <span className={[styles.dropdown, styles.selected].join(' ')}>
-            <span>区域</span>
-            <i className='iconfont icon-arrow'/>
-          </span>
-        </Flex.Item>
+        {
+          titleList.map(el => {
+            const isSelected = titleSelectedStatus[el.type]
+            return (
+              <Flex.Item key={el.type} onClick={() => onClick(el.type)}>
+                {/* 选中类名 */}
+                <span className={[styles.dropdown, isSelected ? styles.selected : ''].join(' ')}>
+                  <span>{el.title}</span>
+                  <i className='iconfont icon-arrow'/>
+                </span>
+              </Flex.Item>
+
+            )
+          })
+        }
       </Flex>
     )
-  }
 }
