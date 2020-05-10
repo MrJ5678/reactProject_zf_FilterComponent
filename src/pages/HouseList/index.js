@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-20 16:58:38
- * @LastEditTime: 2020-05-05 17:30:33
+ * @LastEditTime: 2020-05-10 16:00:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /react_zufang/src/pages/HouseList/index.js
@@ -19,9 +19,18 @@ import Filter from './components/Filter'
 import styles from './index.module.css'
 
 // 获取当前定位信息
-const { label } = JSON.parse(localStorage.getItem('hkzf_city'))
+const { label, value } = JSON.parse(localStorage.getItem('hkzf_city'))
 
 export default class HouseList extends React.Component {
+  filters = {}
+
+  state = {
+    // 列表数据
+    list: [],
+    // 总条数
+    count: 0
+  }
+
   render() {
     return (
       <div>
@@ -37,6 +46,10 @@ export default class HouseList extends React.Component {
         <Filter onFilters={this.onFilters.bind(this)}/>
       </div>
     )
+  }
+
+  componentDidMount() {
+    this.searchHouseList()
   }
 
   onFilters(filters) {
@@ -56,5 +69,10 @@ export default class HouseList extends React.Component {
       }
     })
     console.log(res)
+    const { data: { body: { list, count }}} = res
+    this.setState({
+      list,
+      count
+    })
   }
 }
